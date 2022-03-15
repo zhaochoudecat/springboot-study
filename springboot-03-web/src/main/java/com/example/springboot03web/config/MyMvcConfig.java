@@ -28,10 +28,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
      * 自定义拦截器
      * @param registry
      */
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new LoginHandlerInterceptor())
-//                .addPathPatterns("/**") //添加所有路径
-//                .excludePathPatterns("/index.html","/","/user/login","/css/*","/js/**","/img/**"); //排除路径
-//    }
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginHandlerInterceptor())
+                .addPathPatterns("/**") //添加所有路径
+                .excludePathPatterns("/index.html","/","/user/login","/css/*","/js/**","/img/**"); //排除路径
+    }
 }
