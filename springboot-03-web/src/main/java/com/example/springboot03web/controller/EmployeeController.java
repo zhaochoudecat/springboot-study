@@ -64,4 +64,10 @@ public class EmployeeController {
         return "redirect:/emps";
     }
 
+    //删除员工
+    @GetMapping("/delemp/{id}")
+    public String deleteEmp(@PathVariable("id") Integer id){
+        employeeDao.removeEmployee(id);
+        return "redirect:/emps";
+    }
 }
